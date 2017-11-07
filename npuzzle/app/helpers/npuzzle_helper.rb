@@ -1,0 +1,2 @@
+module NpuzzleHelper
+end

@@ -1,0 +1,123 @@
+- length = (@results[:start].state.first.count ** 2).to_s.length
+
+.panel-heading.text-center
+  h1 A* Search Algorithm
+
+.panel-heading.text-center
+  span.h3 Explanation  
+.panel-body
+  .col-lg-4.text-center
+    h4 What is it?
+    p The #{link_to 'A* Search algorithm', "https://en.wikipedia.org/wiki/A*_search_algorithm" } (Pronounced 'A Star') is a pathfinding procedure based on #{link_to "Edsger Djikstra's Algorithm", "https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm"}, which can be used to find a viable path from a starting position or state, to an end position or state in a more computationally efficient way.  
+  .col-lg-4.text-center
+    h4 Why is it useful?
+    p Search algorithm's are historically known for their time and iterational cost. Djikstra's Algorithm, which A* is based on, was made to find the best solution in the least amount of iterations. This can often still be an expensive and long process. In cases where the best path is not needed, or a solution is needed quickly, A* is able to find a non-optimal solution faster by guiding the algorithm.
+  .col-lg-4.text-center
+    h4 How does it work?
+    p Djikstra's algorithm works by exploring every possible choice that can be taken in a problem and creating a tree of possible decisions until it finds a solution. Every iteration then explores the best looking choice, and the new decisions are added back to a queue, until a solution is found. 
+    p A* guides this process by calculating a guess of how close a decision brings the problem to being solved. This estimation allows A* to ignore many choices and thus find a solution faster.
+.panel-heading.text-center
+  h1 Applying It To A Puzzle
+.panel-body.text-center
+  p Below we have a representation of a sliding block puzzle, akin to the cheap picture toys occasionally found on keychains. This "NPuzzle", named for the requirement to be able to solve a 'N by N' puzzle is represented here as a series of numbers which need to be swapped in order to place the blocks in the correct order and solve the puzzle.
+  span #{'[0, 1, 2]'}
+  br
+  span #{'[3, 4, 5]'}
+  br
+  span #{'[6, 7, 8]'}
+  br
+  br
+  p This above is a 3 x 3 puzzle #{"(N = 3)"}, with each number representing a place on the puzzle. For the purposes of this explanation, the number '0' represents the empty space on the puzzle into which an adjacent block may be moved, though the A* Algorithm can be applied to any size puzzle. Below is an example of a puzzle in which #{'N = 4'}.
+  span #{'[00, 01, 02, 03]'}
+  br
+  span #{'[07, 06, 05, 04]'}
+  br
+  span #{'[08, 09, 10, 11]'}
+  br
+  span #{'[15, 14, 13, 12]'}
+  br
+  br
+.panel-heading.text-center
+  span.h3 Input Your Own Puzzle
+.panel-body
+  = form_tag npuzzle_index_path
+
+.panel-heading.text-center
+  span.h3 Important States  
+.panel-body
+  .container-fluid 
+    .col-lg-6.text-center
+      b Start State:
+      br
+      - @results[:start].state.each_with_index do |line, index|
+        - line.each do |v| 
+          = image_tag "#{line.size}x#{line.size}/#{index}-#{v % line.size}.jpeg"
+        / span #{'['}#{line.map{|v| v.to_s.rjust(length, '0') }.join(', ')}#{']'}
+        br
+      br
+    .col-lg-6.text-center
+      b End State:
+      br
+      - @results[:end].state.each_with_index do |line, index|
+        - line.each do |v| 
+          = image_tag "#{line.size}x#{line.size}/#{index}-#{v % line.size}.jpeg"
+        / span #{'['}#{line.map{|v| v.to_s.rjust(length, '0') }.join(', ')}#{']'}
+        br
+
+  / .
+  /   h2 Representations
+  /   - @results[:representations].each do |rep, v|
+  /     span #{rep}
+  /     br
+
+.panel-heading.text-center
+  span.h3 Solution
+.panel-body
+  - @results[:solution].reverse.each_with_index do |solution, index|
+    - if solution.class == String
+      b #{solution}
+      br
+    - else
+      / .col-sm-2.text-center
+      .text-center
+        b #{index == 0 ? 'Start' : "Move #{index}"}
+        br
+        - solution.each_with_index do |line, i|
+          span #{'['}#{line.map{|v| v.to_s.rjust(length, '0') }.join(', ')}#{']'}
+          br
+          - line.each do |v|
+            = image_tag "#{line.size}x#{line.size}/#{v % line.size}-#{v % line.size}.jpeg"
+            span = "line = #{line.inspect}"
+            br
+            span = "v = #{v}"
+            br
+            span = "mod = #{v % line.size}"
+            br
+            span = "index = #{index}"
+            br
+            span = "i = #{i}"
+          br
+        br
+
+    / . 
+    /   h2 Open Set
+    /   - @results[:open_set].each do |weight, set|
+    /     - set.each do |result|
+    /       .
+    /         b #{result}
+    /         br
+    /         span #{result.state}
+    /         br
+    /         span Parent Node: #{result.parent || 'None'}
+
+    / . 
+    /   h2 Closed Set
+    /   - unless @results[:closed_set].empty?
+    /     .
+    /       b #{@results[:closed_set].select{|v| v.parent.nil?}.first}
+    /       br
+    /       - @results[:closed_set].select{|v| v.parent.nil?}.first.state.each do |line|
+    /         span #{line}
+    /         br
+    /       br
+    /       = render partial: 'sets', locals: {indent: 1, items: @results[:closed_set].select{|v| v.parent == @results[:closed_set].select{|v| v.parent.nil?}.first}, set: @results[:closed_set]}

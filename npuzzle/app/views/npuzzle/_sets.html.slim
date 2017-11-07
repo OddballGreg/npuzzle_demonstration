@@ -1,0 +1,11 @@
+span ----------------
+- items.each do |item|
+  .
+    b #{"--" * indent} #{item}
+    br
+    - item.state.each do |line|
+      span #{"--" * indent} #{line}
+      br
+    br
+    = render partial: 'sets', locals: {indent: indent + 1, items: set.select{|v| v.parent == item}, set: set} unless set.select{|v| v.parent == item}.count.zero?
+/ span ----------------
