@@ -1,116 +1,167 @@
 class NpuzzleSolver
   def self.resolve
-    puzzle = '0 2 8,7 4 1,6 3 5' #Unsolveable, undetected
-    # puzzle = '0 1 2,5 4 3,6 7 8' #Solveable in 2 moves
-    # puzzle = '1 0 2,3 4 5,8 7 6' #Solveable in 25 moves
-    # puzzle = '1 2 5,4 3 0,6 7 8' #Solveable in 15 moves
-    # puzzle = '1 2 5,4 3 0,6 8 7' #Unsolveable, detected
-    # puzzle = '1 2 5,3 4 0,6 8 7' #Solveable In 19 Moves
-    # puzzle = '1 0 2 3,4 5 6 7,8 9 10 11,15 14 13 12' #Solveable in 25 moves
-    # puzzle = '1 2 3 0,4 5 6 7,8 9 10 11,15 14 13 12' #Solveable in 27 moves
-    # puzzle = '1 2 3 0,4 5 7 6,8 10 9 11,12 14 13 15' #Takes too long
-    # puzzle = '4 5 6 0,1 2 3 7,8 9 10 11,15 14 13 12' #5 Inversions Detected
-    # puzzle = '1 2 3 0,7 5 6 4,8 9 10 11,15 14 13 12' #Takes too long
-    # puzzle = '1 2 3 0,7 5 6 4,8 9 11 12,15 14 13 10' #Not Solveable Detected, 7 Inversions
-    # puzzle = '1 2 3 0,7 5 4 8,6 9 12 11,15 14 13 10' #Takes too long
-    # puzzle = '1 0 2 3,4 5 6 7,14 9 10 11,15 8 13 12' # Not Solved
-    # puzzle = '1 0 2 4,3 5 6 7,8 9 10 11,15 14 13 12' #Not Solveable, Detected 5 Inversions
-    # puzzle = '1 0 2 4,3 5 6 7,8 9 10 15,11 14 13 12' #Not Solveable, Detected 5 Inversions
-    # puzzle = '12 0 2 4,3 5 6 7,8 9 10 15,11 14 13 1'  #Not Solveable, Detected 5 Inversions
-    # puzzle = '12 2 0 4,3 5 6 7,8 9 10 15,11 14 1 13'  #Not Solveable, Detected 5 Inversions
-    # puzzle = '1 2 5 9,3 4 0 10,6 8 7 11,15 14 13 12' # Detected as unsolveable with 7 inversions
-    # puzzle = '0 2 1 3,4 5 6 7,8 11 9 10,15 14 13 12' # Not Solved, not detected as unsolveable
-    # puzzle = '1 0 2 3,4 5 6 7,8 9 10 11,12 13 14 15' #Not Solved, Not Detected
-    # puzzle = '1 0 2 3,4 5 6 7,8 9 10 11,12 14 13 15' # Not Solved, Not Detected
-    # puzzle = '1 0 2 3 16,4 5 6 7 17,8 9 10 11 18,12 14 13 15 19,24 23 22 21 20' #Unsolveable, 13 Inversions
-    # puzzle = '1 0 2 3 4,9 8 7 6 5,10 11 12 13 14,19 18 17 16 15,20 21 22 23 24' # Solveable
-    # puzzle = '1 0 2 3 4,5 6 7 8 9,10 11 12 13 14,15 16 17 18 19,20 21 22 23 24' # Solveable
-
-    complete_puzzle = '0 1 2,3 4 5,6 7 8'
-    # complete_puzzle = '0 1 2 3,4 5 6 7,8 9 10 11,12 13 14 15'
-    # complete_puzzle = '0 1 2 3 4,5 6 7 8 9,10 11 12 13 14,15 16 17 18 19,20 21 22 23 24'
-    chosen_heuristic = 'manhattan'
-
-    end_state = Node.new(complete_puzzle, 0, nil, nil, end_node: true, heuristic: chosen_heuristic)
-    start = Node.new(puzzle, 0, nil, end_state, start_node: true, heuristic: chosen_heuristic)
-    solution = {start: start, 
-                end: end_state, 
-                open_set: Hash.new(Array.new).merge({0 => [start]}),
+    solution = {start: nil, 
+                end: nil, 
+                open_set: nil,
                 closed_set: [],
                 solution: [],
                 representations: {}
               }
 
+    while solution[:solution].empty?
+      puzzlesize = rand(3..5)
+      puts puzzlesize
+      threepuzzle = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+      fourpuzzle = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+      fivepuzzle = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+      puzzle = nil
+      complete_puzzle = nil
 
-    
-    # blank_pos = end_state.state.select{|v| v.include?(0)}.first.find_index(0)
-    # check = puzzle.clone.delete!(' ,0')
-    # index = 0
-    # inversions = 0
-    # while check[index + 1]
-    #   inversions += 1 if check[index] > check[index + 1]
-    #   index += 1
-    # end
-    # if (inversions % 2 == 1 && end_state.state.size % 2 == 1) || (end_state.state.size % 2 == 0 && (end_state.state.size - blank_pos) % 2 != inversions % 2) 
-    #   solution[:solution] = ["- Puzzle Cannot Be Solved! - #{inversions} #{'inversion'.pluralize(inversions)}"]
-    #   return solution
-    # end
+      if puzzlesize == 3
+        complete_puzzle = [[], [], []]
+        puzzle = [[], [], []]
+        temp_puzzle = threepuzzle.shuffle
 
-    solution_found = false
-    iteration = 1
-    start_time = Time.now
-
-    lock = Mutex.new
-
-    # threads = Array.new(2) do
-    #   Thread.new do
-          while !solution_found && !solution[:open_set].map{|k,v| v.size}.sum.zero? && iteration < 500_000 && (Time.now - start_time) < 3
-            index = 0
-            lock.synchronize{ index += 1 } while solution[:open_set][index].empty?
-            current = lock.synchronize{ solution[:open_set][index].shift }
-            # solution[:open_set].delete(index) if solution[:open_set][index].empty?
-
-            new_nodes = current.explore
-            unless new_nodes.empty?
-              new_nodes.map do |node|
-                if Node.matching_state?(node.state, end_state.state)
-                  while node
-                    lock.synchronize{ solution[:solution] << node.state }
-                    node = node.parent
-                  end
-                  solution_found = true
-                end
-              end
-              new_nodes.each do |node|
-                if !solution[:representations].has_key?(node.state.flatten.to_s)
-                  # puts "Adding Node To Open Set"
-                  lock.synchronize{ solution[:open_set][node.weight] = [] } unless solution[:open_set].has_key?(node.weight)
-                  lock.synchronize{ solution[:open_set][node.weight] << node }
-                  lock.synchronize{ solution[:representations][node.state.flatten.to_s] = true }
-                end
-              end
-            end
-            lock.synchronize{ solution[:closed_set] << current}
-          
-          # puts "Open Set: #{solution[:open_set].map{|k,v| v.size}.sum}, Iteration: #{iteration += 1}, State: #{current.state.flatten.to_s}, Weight: #{current.weight}, Distance: #{current.distance}, Heuristic: #{current.heuristic}"
+        i = 0
+        while i < 3
+          j = 0
+          while j < 3
+            complete_puzzle[i][j] = threepuzzle.pop
+            j += 1
+          end
+          i += 1
         end
+      elsif puzzlesize == 4
+        complete_puzzle = [[], [], [], []]
+        puzzle = [[], [], [], []]
+        temp_puzzle = fourpuzzle.shuffle
+
+        i = 0
+        while i < 4
+          j = 0
+          while j < 4
+            complete_puzzle[i][j] = fourpuzzle.pop
+            j += 1
+          end
+          i += 1
+        end
+      else
+        complete_puzzle = [[], [], [], [], []]
+        puzzle = [[], [], [], [], []]
+        temp_puzzle = fivepuzzle.shuffle
+
+        i = 0
+        while i < 5
+          j = 0
+          while j < 5
+            complete_puzzle[i][j] = fivepuzzle.pop
+            j += 1
+          end
+          i += 1
+        end
+      end
+      puzzle = complete_puzzle.map{|v| v.clone}
+
+      rand(1..50).times do |i|
+        x = 0
+        y = 0
+        while x < puzzle.size
+          if puzzle[x][y] == 0
+            moveset = [{x: -1, y: 0}, {x: 1, y: 0}, {x: 0, y: -1}, {x: 0, y: 1}].shuffle
+            move = moveset.pop
+            while x + move[:x] < 0 || x + move[:x] >= puzzle.size || y + move[:y] < 0 || y + move[:y] >= puzzle.size
+              move = moveset.pop
+            end
+            temp = puzzle[x][y]
+            puzzle[x][y] = puzzle[x + move[:x]][y + move[:y]]
+            puzzle[x + move[:x]][y + move[:y]] = temp
+            next
+          end
+          y += 1
+          if y > puzzle.size
+            y = 0
+            x += 1
+          end
+        end
+
+      complete_puzzle = complete_puzzle.select { |v| !v.empty? }.reverse.map{|v| v.reverse }
+      puzzle = puzzle.select { |v| !v.empty? }
+
+      chosen_heuristic = 'manhattan'
+
+      solution[:end] = Node.new(complete_puzzle, 0, nil, nil, end_node: true, heuristic: chosen_heuristic)
+      solution[:start] = Node.new(puzzle, 0, nil, solution[:end], start_node: true, heuristic: chosen_heuristic)
+      solution[:open_set] = Hash.new(Array.new).merge({0 => [solution[:start]]})
+
+      # blank_pos = end_state.state.select{|v| v.include?(0)}.first.find_index(0)
+      # check = puzzle.clone.delete!(' ,0')
+      # index = 0
+      # inversions = 0
+      # while check[index + 1]
+      #   inversions += 1 if check[index] > check[index + 1]
+      #   index += 1
       # end
-    # end
+      # if (inversions % 2 == 1 && end_state.state.size % 2 == 1) || (end_state.state.size % 2 == 0 && (end_state.state.size - blank_pos) % 2 != inversions % 2) 
+      #   solution[:solution] = ["- Puzzle Cannot Be Solved! - #{inversions} #{'inversion'.pluralize(inversions)}"]
+      #   return solution
+      # end
 
-    # threads.each(&:join)
+      solution_found = false
+      iteration = 1
+      start_time = Time.now
 
-    # timer = 2
-    # while !timer.zero? && !solution_found
-    #   sleep 2
-    #   if solution[:open_set].map{|k,v| v.size}.sum > 0
-    #     timer -= 1 
-    #   else
-    #     timer = 2
-    #   end
-    # end
+      lock = Mutex.new
 
-    # thread.join
-    # ap solution[:representations]
+      # threads = Array.new(2) do
+      #   Thread.new do
+            while !solution_found && !solution[:open_set].map{|k,v| v.size}.sum.zero? && iteration < 10_000 && (Time.now - start_time) < 0.50 
+              index = 0
+              lock.synchronize{ index += 1 } while solution[:open_set][index].empty?
+              current = lock.synchronize{ solution[:open_set][index].shift }
+              # solution[:open_set].delete(index) if solution[:open_set][index].empty?
+
+              new_nodes = current.explore
+              unless new_nodes.empty?
+                new_nodes.map do |node|
+                  if Node.matching_state?(node.state, solution[:end].state)
+                    while node
+                      lock.synchronize{ solution[:solution] << node.state }
+                      node = node.parent
+                    end
+                    solution_found = true
+                  end
+                end
+                new_nodes.each do |node|
+                  if !solution[:representations].has_key?(node.state.flatten.to_s)
+                    # puts "Adding Node To Open Set"
+                    lock.synchronize{ solution[:open_set][node.weight] = [] } unless solution[:open_set].has_key?(node.weight)
+                    lock.synchronize{ solution[:open_set][node.weight] << node }
+                    lock.synchronize{ solution[:representations][node.state.flatten.to_s] = true }
+                  end
+                end
+              end
+              lock.synchronize{ solution[:closed_set] << current}
+            
+            # puts "Open Set: #{solution[:open_set].map{|k,v| v.size}.sum}, Iteration: #{iteration += 1}, State: #{current.state.flatten.to_s}, Weight: #{current.weight}, Distance: #{current.distance}, Heuristic: #{current.heuristic}"
+          end
+        # end
+      # end
+
+      # threads.each(&:join)
+
+      # timer = 2
+      # while !timer.zero? && !solution_found
+      #   sleep 2
+      #   if solution[:open_set].map{|k,v| v.size}.sum > 0
+      #     timer -= 1 
+      #   else
+      #     timer = 2
+      #   end
+      # end
+
+      # thread.join
+      # ap solution[:representations]
+    end
 
     if solution[:open_set].map{|k,v| v.size}.sum.zero? && solution[:solution].empty?
       solution[:solution] = ['- Puzzle Cannot Be Solved! Open Set Has Been Emptied']

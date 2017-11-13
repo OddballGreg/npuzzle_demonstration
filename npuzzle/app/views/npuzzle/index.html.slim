@@ -37,10 +37,11 @@
   span #{'[15, 14, 13, 12]'}
   br
   br
-.panel-heading.text-center
-  span.h3 Input Your Own Puzzle
-.panel-body
-  = form_tag npuzzle_index_path
+/ .panel-heading.text-center
+/   span.h3 Input Your Own Puzzle
+/ .panel-body
+  / = form_tag npuzzle_index_path do |f|
+    = f.submit
 
 .panel-heading.text-center
   span.h3 Important States  
@@ -51,7 +52,7 @@
       br
       - @results[:start].state.each_with_index do |line, index|
         - line.each do |v| 
-          = image_tag "#{line.size}x#{line.size}/#{index}-#{v % line.size}.jpeg"
+          = image_tag "#{line.size}x#{line.size}/#{v}.jpeg"
         / span #{'['}#{line.map{|v| v.to_s.rjust(length, '0') }.join(', ')}#{']'}
         br
       br
@@ -60,7 +61,7 @@
       br
       - @results[:end].state.each_with_index do |line, index|
         - line.each do |v| 
-          = image_tag "#{line.size}x#{line.size}/#{index}-#{v % line.size}.jpeg"
+          = image_tag "#{line.size}x#{line.size}/#{v}.jpeg"
         / span #{'['}#{line.map{|v| v.to_s.rjust(length, '0') }.join(', ')}#{']'}
         br
 
@@ -83,19 +84,19 @@
         b #{index == 0 ? 'Start' : "Move #{index}"}
         br
         - solution.each_with_index do |line, i|
-          span #{'['}#{line.map{|v| v.to_s.rjust(length, '0') }.join(', ')}#{']'}
-          br
+          / span #{'['}#{line.map{|v| v.to_s.rjust(length, '0') }.join(', ')}#{']'}
+          / br
           - line.each do |v|
-            = image_tag "#{line.size}x#{line.size}/#{v % line.size}-#{v % line.size}.jpeg"
-            span = "line = #{line.inspect}"
-            br
-            span = "v = #{v}"
-            br
-            span = "mod = #{v % line.size}"
-            br
-            span = "index = #{index}"
-            br
-            span = "i = #{i}"
+            = image_tag "#{line.size}x#{line.size}/#{v}.jpeg"
+            / span = "line = #{line.inspect}"
+            / br
+            / span = "v = #{v}"
+            / br
+            / span = "mod = #{v % line.size}"
+            / br
+            / span = "index = #{index}"
+            / br
+            / span = "i = #{i}"
           br
         br
 
