@@ -83,6 +83,7 @@ class NpuzzleSolver
             x += 1
           end
         end
+      end
 
       complete_puzzle = complete_puzzle.select { |v| !v.empty? }.reverse.map{|v| v.reverse }
       puzzle = puzzle.select { |v| !v.empty? }
