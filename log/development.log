@@ -1,0 +1,1611 @@
+Started GET "/" for 127.0.0.1 at 2017-11-15 10:35:57 +0200
+  [1m[35m (57.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (24.6ms)
+Completed 500 Internal Server Error in 2704ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (bad URI(is not URI?): Scramble The Puzzle):
+    41: .panel-heading.text-center
+    42:   span.h3 Try Another Puzzle
+    43: .panel-body
+    44:   = button_to root_path, 'Scramble The Puzzle'
+    45:   / = form_tag npuzzle_index_path do |f|
+    46:     = f.submit
+    47: 
+  
+app/views/npuzzle/index.html.slim:44:in `_app_views_npuzzle_index_html_slim___597989043316903295_70253088935980'
+Started GET "/" for 127.0.0.1 at 2017-11-15 10:36:17 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (1373.8ms)
+  Rendered layouts/_navbar.html.slim (3.8ms)
+  Rendered layouts/_footer.html.slim (2.3ms)
+Completed 200 OK in 1624ms (Views: 1420.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 10:36:46 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (48.1ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+  Rendered layouts/_footer.html.slim (2.0ms)
+Completed 200 OK in 595ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 10:36:55 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (61.5ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (2.0ms)
+Completed 200 OK in 2784ms (Views: 133.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 10:37:01 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (129.8ms)
+  Rendered layouts/_navbar.html.slim (2.6ms)
+  Rendered layouts/_footer.html.slim (2.4ms)
+Completed 200 OK in 1406ms (Views: 154.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2017-11-15 10:37:04 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/" for 127.0.0.1 at 2017-11-15 10:37:40 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/" for 127.0.0.1 at 2017-11-15 10:37:44 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-11-15 10:37:47 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (69.3ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.3ms)
+Completed 200 OK in 4003ms (Views: 130.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 10:37:52 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (49.2ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 127ms (Views: 85.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 10:37:57 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (69.0ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (2.2ms)
+Completed 200 OK in 3159ms (Views: 93.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 10:38:03 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (61.6ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.3ms)
+Completed 200 OK in 193ms (Views: 84.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:01:47 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (73.8ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.3ms)
+Completed 200 OK in 477ms (Views: 196.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:01:52 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (75.9ms)
+  Rendered layouts/_navbar.html.slim (2.5ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 1172ms (Views: 97.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:01:54 +0200
+Processing by NpuzzleController#index as HTML
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:01:55 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (1166.9ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.2ms)
+Completed 200 OK in 3276ms (Views: 1954.3ms | ActiveRecord: 0.0ms)
+
+
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (28.3ms)
+  Rendered layouts/_navbar.html.slim (0.1ms)
+  Rendered layouts/_footer.html.slim (0.0ms)
+Completed 200 OK in 4574ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:02:36 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (47.6ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.2ms)
+Completed 200 OK in 1123ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:03:11 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (63.7ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 439ms (Views: 89.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:03:34 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (53.9ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 288ms (Views: 136.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:04:05 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (53.4ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 1506ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:04:11 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (68.2ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (2.2ms)
+Completed 200 OK in 322ms (Views: 93.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:04:14 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (49.9ms)
+  Rendered layouts/_navbar.html.slim (2.6ms)
+  Rendered layouts/_footer.html.slim (2.2ms)
+Completed 200 OK in 619ms (Views: 72.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:04:23 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (50.5ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 1728ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:15:05 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (75.9ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (2.3ms)
+Completed 200 OK in 2755ms (Views: 172.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:15:10 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (67.1ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.7ms)
+Completed 200 OK in 1400ms (Views: 91.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:15:13 +0200
+Processing by NpuzzleController#index as HTML
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:15:14 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:15:15 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (271.4ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 2769ms (Views: 719.5ms | ActiveRecord: 0.0ms)
+
+
+  Rendered npuzzle/index.html.slim within layouts/application (657.0ms)
+  Rendered layouts/_navbar.html.slim (3.3ms)
+  Rendered layouts/_footer.html.slim (2.0ms)
+Completed 200 OK in 2157ms (Views: 1450.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:15:17 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:15:18 +0200
+Processing by NpuzzleController#index as HTML
+  Rendered npuzzle/index.html.slim within layouts/application (243.8ms)
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered layouts/_navbar.html.slim (15.0ms)
+  Rendered layouts/_footer.html.slim (5.0ms)
+Completed 200 OK in 2913ms (Views: 595.9ms | ActiveRecord: 0.0ms)
+
+
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (132.2ms)
+  Rendered npuzzle/index.html.slim within layouts/application (121.3ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+  Rendered layouts/_footer.html.slim (2.4ms)
+Completed 200 OK in 537ms (Views: 217.9ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_navbar.html.slim (0.1ms)
+  Rendered layouts/_footer.html.slim (0.0ms)
+Completed 200 OK in 1081ms (Views: 362.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:17:04 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (70.5ms)
+  Rendered layouts/_navbar.html.slim (3.3ms)
+  Rendered layouts/_footer.html.slim (2.3ms)
+Completed 200 OK in 1889ms (Views: 163.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:18:06 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (77.6ms)
+Completed 500 Internal Server Error in 8148ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/config
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/images
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/javascripts
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/stylesheets
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/actioncable-5.1.4/lib/assets/compiled
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.4/lib/assets/compiled
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/node_modules):
+     8:     link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"
+     9:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' 
+    10: 
+    11:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload' 
+    12:     script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"
+    13: 
+    14:   body.primary-bg
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.slim:11:in `_app_views_layouts_application_html_slim__3271737648724373035_70253179693080'
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:25:28 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (158.8ms)
+Completed 500 Internal Server Error in 1052ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/config
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/images
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/javascripts
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/stylesheets
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/actioncable-5.1.4/lib/assets/compiled
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.4/lib/assets/compiled
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/node_modules):
+     8:     link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"
+     9:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' 
+    10: 
+    11:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload' 
+    12:     script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"
+    13: 
+    14:   body.primary-bg
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.slim:11:in `_app_views_layouts_application_html_slim__3271737648724373035_70253161400540'
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:26:05 +0200
+  [1m[35m (30.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (926.2ms)
+  Rendered layouts/_navbar.html.slim (12.1ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 1291ms (Views: 1015.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:27:00 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (65.5ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.4ms)
+Completed 200 OK in 1992ms (Views: 160.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:27:54 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (68.0ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (2.0ms)
+Completed 200 OK in 3191ms (Views: 151.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:28:11 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (78.5ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+  Rendered layouts/_footer.html.slim (2.0ms)
+Completed 200 OK in 1176ms (Views: 126.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:28:18 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (70.5ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+  Rendered layouts/_footer.html.slim (2.4ms)
+Completed 200 OK in 1660ms (Views: 127.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:28:30 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (62.6ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 1658ms (Views: 121.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:28:38 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (72.0ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 323ms (Views: 147.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:28:54 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (54.6ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+  Rendered layouts/_footer.html.slim (2.0ms)
+Completed 200 OK in 1179ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:29:39 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (57.9ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 1759ms (Views: 145.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:29:59 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (62.5ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 2246ms (Views: 143.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:31:11 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (60.9ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 2779ms (Views: 200.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:31:44 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (76.5ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 3292ms (Views: 158.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:34:54 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (56.2ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.0ms)
+Completed 200 OK in 178ms (Views: 145.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:36:06 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (76.2ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.4ms)
+Completed 200 OK in 299ms (Views: 177.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:36:31 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (47.6ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.0ms)
+Completed 200 OK in 1171ms (Views: 75.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:37:51 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (70.8ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.3ms)
+Completed 200 OK in 1246ms (Views: 153.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:38:52 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (108.9ms)
+  Rendered layouts/_navbar.html.slim (6.0ms)
+  Rendered layouts/_footer.html.slim (1.8ms)
+Completed 200 OK in 872ms (Views: 278.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:39:54 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (66.3ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 369ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:40:11 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (57.4ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 392ms (Views: 81.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:42:19 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (49.3ms)
+Completed 500 Internal Server Error in 643ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Unknown line indicator
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/views/npuzzle/index.html.slim, Line 102, Column 0
+    }
+    ^
+):
+     99:         d.setAttribute('class', 'video');
+    100:         ancestor.appendChild(d);
+    101:     }
+    102: }
+  
+app/views/npuzzle/index.html.slim:102
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:42:29 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (61.3ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.4ms)
+Completed 200 OK in 1254ms (Views: 209.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:49:15 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (71.0ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+  Rendered layouts/_footer.html.slim (2.2ms)
+Completed 200 OK in 1842ms (Views: 250.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:50:08 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (85.3ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 204ms (Views: 174.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:50:48 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (89.0ms)
+  Rendered layouts/_navbar.html.slim (4.3ms)
+  Rendered layouts/_footer.html.slim (2.2ms)
+Completed 200 OK in 1402ms (Views: 196.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:51:25 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (80.6ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 1302ms (Views: 193.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:52:17 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (65.8ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.0ms)
+Completed 200 OK in 2202ms (Views: 181.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:52:45 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (52.5ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.2ms)
+Completed 200 OK in 919ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:53:04 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (51.0ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 1855ms (Views: 74.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:53:39 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (57.8ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+  Rendered layouts/_footer.html.slim (2.0ms)
+Completed 200 OK in 1679ms (Views: 122.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:56:14 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (53.7ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.0ms)
+Completed 200 OK in 690ms (Views: 157.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:56:27 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (52.5ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 5226ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:57:15 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (59.8ms)
+  Rendered layouts/_navbar.html.slim (3.7ms)
+  Rendered layouts/_footer.html.slim (2.9ms)
+Completed 200 OK in 152ms (Views: 96.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:58:33 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (101.3ms)
+  Rendered layouts/_navbar.html.slim (2.4ms)
+  Rendered layouts/_footer.html.slim (1.9ms)
+Completed 200 OK in 191ms (Views: 133.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:58:35 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (62.1ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+  Rendered layouts/_footer.html.slim (2.3ms)
+Completed 200 OK in 321ms (Views: 89.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:58:37 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (56.6ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 156ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:58:38 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (55.4ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 151ms (Views: 82.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:58:40 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (55.7ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+  Rendered layouts/_footer.html.slim (2.2ms)
+Completed 200 OK in 165ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:58:41 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (71.7ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 203ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:59:06 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (61.7ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 367ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:59:24 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (58.1ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.0ms)
+Completed 200 OK in 292ms (Views: 82.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:59:44 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (64.3ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.5ms)
+Completed 200 OK in 119ms (Views: 88.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:59:48 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (42.7ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (2.2ms)
+Completed 200 OK in 79ms (Views: 67.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 11:59:50 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (57.2ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.2ms)
+Completed 200 OK in 253ms (Views: 82.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:00:13 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (62.7ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (2.0ms)
+Completed 200 OK in 166ms (Views: 87.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:02:35 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (72.2ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (2.1ms)
+Completed 200 OK in 244ms (Views: 179.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:02:47 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (74.3ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (2.7ms)
+Completed 200 OK in 411ms (Views: 168.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:03:55 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (93.7ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (2.5ms)
+Completed 200 OK in 233ms (Views: 190.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:04:11 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (54.9ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.7ms)
+Completed 200 OK in 244ms (Views: 79.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:04:44 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (78.8ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.8ms)
+Completed 200 OK in 400ms (Views: 168.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:04:52 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (87.7ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (2.8ms)
+Completed 200 OK in 280ms (Views: 156.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:06:42 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (67.7ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.7ms)
+Completed 200 OK in 308ms (Views: 274.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:06:59 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (87.0ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.9ms)
+Completed 200 OK in 241ms (Views: 207.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:07:03 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (62.1ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.6ms)
+Completed 200 OK in 99ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:07:10 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (55.3ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.5ms)
+Completed 200 OK in 163ms (Views: 88.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:07:35 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (45.6ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.7ms)
+Completed 200 OK in 77ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:07:38 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (62.4ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+  Rendered layouts/_footer.html.slim (2.9ms)
+Completed 200 OK in 521ms (Views: 89.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:07:45 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (67.0ms)
+  Rendered layouts/_navbar.html.slim (3.4ms)
+  Rendered layouts/_footer.html.slim (3.3ms)
+Completed 200 OK in 182ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:08:05 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (65.3ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.9ms)
+Completed 200 OK in 203ms (Views: 109.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:08:27 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (61.2ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (3.2ms)
+Completed 200 OK in 331ms (Views: 90.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:10:49 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (68.7ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+  Rendered layouts/_footer.html.slim (3.2ms)
+Completed 200 OK in 198ms (Views: 146.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:12:39 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (54.1ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (3.1ms)
+Completed 200 OK in 112ms (Views: 79.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:13:51 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (160.6ms)
+  Rendered layouts/_navbar.html.slim (3.7ms)
+  Rendered layouts/_footer.html.slim (3.3ms)
+Completed 200 OK in 682ms (Views: 489.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:13:59 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (69.2ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+  Rendered layouts/_footer.html.slim (3.4ms)
+Completed 200 OK in 431ms (Views: 146.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:14:09 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (76.0ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+  Rendered layouts/_footer.html.slim (2.8ms)
+Completed 200 OK in 260ms (Views: 205.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:14:26 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (48.1ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.8ms)
+Completed 200 OK in 186ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:18:43 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (116.8ms)
+Completed 500 Internal Server Error in 390ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/config
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/images
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/javascripts
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/stylesheets
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/actioncable-5.1.4/lib/assets/compiled
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.4/lib/assets/compiled
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/node_modules):
+     6:     meta name="viewport" content="width=device-width, initial-scale=1.0"
+     7: 
+     8:     link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"
+     9:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' 
+    10: 
+    11:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload' 
+    12:     script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"
+  
+app/assets/stylesheets/application.css:15
+app/views/layouts/application.html.slim:9:in `_app_views_layouts_application_html_slim__4589789040341419895_70177185299520'
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:19:02 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (90.3ms)
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap.min' with type 'text/css'
+Checked in these paths: 
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/config
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/images
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/javascripts
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/stylesheets
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/actioncable-5.1.4/lib/assets/compiled
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.4/lib/assets/compiled
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/node_modules):
+     6:     meta name="viewport" content="width=device-width, initial-scale=1.0"
+     7: 
+     8:     link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"
+     9:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' 
+    10: 
+    11:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload' 
+    12:     script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"
+  
+app/assets/stylesheets/application.css:15
+app/views/layouts/application.html.slim:9:in `_app_views_layouts_application_html_slim__4589789040341419895_70177172517840'
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:19:10 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (62.9ms)
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/config
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/images
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/javascripts
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/stylesheets
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/actioncable-5.1.4/lib/assets/compiled
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.4/lib/assets/compiled
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/node_modules):
+     6:     meta name="viewport" content="width=device-width, initial-scale=1.0"
+     7: 
+     8:     link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"
+     9:     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' 
+    10: 
+    11:     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload' 
+    12:     script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"
+  
+app/assets/stylesheets/application.css:15
+app/views/layouts/application.html.slim:9:in `_app_views_layouts_application_html_slim__4589789040341419895_70177205105660'
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:19:36 +0200
+  [1m[35m (31.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (451.2ms)
+Completed 500 Internal Server Error in 570ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/config
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/images
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/javascripts
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/stylesheets
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/actioncable-5.1.4/lib/assets/compiled
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.4/lib/assets/compiled
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/node_modules):
+    51:       br
+    52:       - @results[:start].state.each_with_index do |line, index|
+    53:         - line.each do |v| 
+    54:           = image_tag "#{line.size}x#{line.size}/#{v}.jpeg", class: "#{v == 0 ? 'empty' : ''}"
+    55:         br
+    56:       br
+    57:     .col-lg-6.text-center
+  
+app/assets/stylesheets/application.css:15
+app/views/npuzzle/index.html.slim:54:in `block (2 levels) in _app_views_npuzzle_index_html_slim___3671284891295016569_70359600256500'
+app/views/npuzzle/index.html.slim:53:in `each'
+app/views/npuzzle/index.html.slim:53:in `block in _app_views_npuzzle_index_html_slim___3671284891295016569_70359600256500'
+app/views/npuzzle/index.html.slim:52:in `each'
+app/views/npuzzle/index.html.slim:52:in `each_with_index'
+app/views/npuzzle/index.html.slim:52:in `_app_views_npuzzle_index_html_slim___3671284891295016569_70359600256500'
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:20:07 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (175.1ms)
+Completed 500 Internal Server Error in 334ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/config
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/images
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/javascripts
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/app/assets/stylesheets
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/actioncable-5.1.4/lib/assets/compiled
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/actionview-5.1.4/lib/assets/compiled
+  /goinfre/ghavenga/.rvm/gems/ruby-2.4.1/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /goinfre/ghavenga/Desktop/Projects/npuzzle_demonstration/node_modules):
+    51:       br
+    52:       - @results[:start].state.each_with_index do |line, index|
+    53:         - line.each do |v| 
+    54:           = image_tag "#{line.size}x#{line.size}/#{v}.jpeg", class: "#{v == 0 ? 'empty' : ''}"
+    55:         br
+    56:       br
+    57:     .col-lg-6.text-center
+  
+app/assets/stylesheets/application.css:15
+app/views/npuzzle/index.html.slim:54:in `block (2 levels) in _app_views_npuzzle_index_html_slim___3671284891295016569_70359624160540'
+app/views/npuzzle/index.html.slim:53:in `each'
+app/views/npuzzle/index.html.slim:53:in `block in _app_views_npuzzle_index_html_slim___3671284891295016569_70359624160540'
+app/views/npuzzle/index.html.slim:52:in `each'
+app/views/npuzzle/index.html.slim:52:in `each_with_index'
+app/views/npuzzle/index.html.slim:52:in `_app_views_npuzzle_index_html_slim___3671284891295016569_70359624160540'
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:20:16 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (206.0ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (3.9ms)
+Completed 200 OK in 439ms (Views: 341.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:20:43 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (66.8ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (3.8ms)
+Completed 200 OK in 340ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:20:56 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (71.4ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+  Rendered layouts/_footer.html.slim (4.2ms)
+Completed 200 OK in 424ms (Views: 151.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:21:13 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (76.2ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (3.1ms)
+Completed 200 OK in 234ms (Views: 145.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:23:56 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (55.8ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (3.4ms)
+Completed 200 OK in 290ms (Views: 209.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:24:07 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (44.1ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (3.3ms)
+Completed 200 OK in 143ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:24:09 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (46.9ms)
+  Rendered layouts/_navbar.html.slim (8.1ms)
+  Rendered layouts/_footer.html.slim (3.2ms)
+Completed 200 OK in 113ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:24:10 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (59.9ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (3.3ms)
+Completed 200 OK in 149ms (Views: 85.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:24:32 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (39.9ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (3.1ms)
+Completed 200 OK in 76ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:25:09 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (65.5ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (3.2ms)
+Completed 200 OK in 445ms (Views: 91.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:27:53 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (88.8ms)
+  Rendered layouts/_navbar.html.slim (3.4ms)
+  Rendered layouts/_footer.html.slim (9.1ms)
+Completed 200 OK in 329ms (Views: 278.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:28:27 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (71.6ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+  Rendered layouts/_footer.html.slim (3.2ms)
+Completed 200 OK in 968ms (Views: 187.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:28:38 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (54.2ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (3.1ms)
+Completed 200 OK in 148ms (Views: 87.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:28:50 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (63.0ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (2.8ms)
+Completed 200 OK in 206ms (Views: 89.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:29:55 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (60.5ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (3.8ms)
+Completed 200 OK in 168ms (Views: 89.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:32:11 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (58.0ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+  Rendered layouts/_footer.html.slim (3.2ms)
+Completed 200 OK in 134ms (Views: 126.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:32:32 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (61.5ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (3.5ms)
+Completed 200 OK in 139ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:32:41 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (53.8ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (3.1ms)
+Completed 200 OK in 142ms (Views: 86.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:33:03 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (46.4ms)
+  Rendered layouts/_navbar.html.slim (3.5ms)
+  Rendered layouts/_footer.html.slim (3.3ms)
+Completed 200 OK in 96ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:36:34 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (78.5ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (3.3ms)
+Completed 200 OK in 368ms (Views: 249.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:40:45 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (79.2ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (3.2ms)
+Completed 200 OK in 1012ms (Views: 226.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:43:41 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (74.2ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (3.6ms)
+Completed 200 OK in 335ms (Views: 159.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:44:19 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (53.3ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (3.7ms)
+Completed 200 OK in 157ms (Views: 148.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 12:44:50 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (134.6ms)
+  Rendered layouts/_navbar.html.slim (2.5ms)
+  Rendered layouts/_footer.html.slim (3.0ms)
+Completed 200 OK in 179ms (Views: 163.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:34:30 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (73.7ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (3.3ms)
+Completed 200 OK in 679ms (Views: 251.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:34:42 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (52.0ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (3.7ms)
+Completed 200 OK in 194ms (Views: 79.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:35:30 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (53.1ms)
+  Rendered layouts/_navbar.html.slim (3.3ms)
+  Rendered layouts/_footer.html.slim (3.7ms)
+Completed 200 OK in 252ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:36:26 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (68.2ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (3.3ms)
+Completed 200 OK in 401ms (Views: 144.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:36:28 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (51.4ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+  Rendered layouts/_footer.html.slim (3.3ms)
+Completed 200 OK in 154ms (Views: 78.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:36:36 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (926.2ms)
+Completed 500 Internal Server Error in 957ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `index' for #<#<Class:0x007ffbbdf599c8>:0x007ffbbff65550>):
+    79:             = image_tag "#{line.size}x#{line.size}/#{v}.jpeg", class: "#{v == 0 ? 'empty' : ''}"
+    80:           br
+    81:         br
+    82:   - if index % 2 == 0
+    83:     hr
+    84: 
+    85: .panel-heading.text-center
+  
+app/views/npuzzle/index.html.slim:82:in `_app_views_npuzzle_index_html_slim___3671284891295016569_70359617056960'
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:36:47 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (75.2ms)
+  Rendered layouts/_navbar.html.slim (3.3ms)
+  Rendered layouts/_footer.html.slim (4.0ms)
+Completed 200 OK in 346ms (Views: 196.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:37:14 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (56.1ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (3.3ms)
+Completed 200 OK in 301ms (Views: 113.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:37:38 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (47.4ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (3.1ms)
+Completed 200 OK in 132ms (Views: 73.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:37:44 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (60.9ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+  Rendered layouts/_footer.html.slim (3.0ms)
+Completed 200 OK in 146ms (Views: 86.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:37:46 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (52.0ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (3.4ms)
+Completed 200 OK in 155ms (Views: 78.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:37:47 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (52.2ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+  Rendered layouts/_footer.html.slim (3.4ms)
+Completed 200 OK in 194ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:37:47 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (55.2ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+  Rendered layouts/_footer.html.slim (3.1ms)
+Completed 200 OK in 551ms (Views: 80.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:37:49 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (63.3ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (3.0ms)
+Completed 200 OK in 242ms (Views: 90.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:37:54 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (55.3ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (3.4ms)
+Completed 200 OK in 241ms (Views: 81.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:37:55 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (55.3ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+  Rendered layouts/_footer.html.slim (3.5ms)
+Completed 200 OK in 144ms (Views: 82.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:37:56 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (56.2ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (3.1ms)
+Completed 200 OK in 174ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:37:57 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (58.8ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (3.3ms)
+Completed 200 OK in 99ms (Views: 85.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:37:58 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (51.4ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (3.4ms)
+Completed 200 OK in 203ms (Views: 77.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:37:59 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (51.7ms)
+  Rendered layouts/_navbar.html.slim (3.4ms)
+  Rendered layouts/_footer.html.slim (3.7ms)
+Completed 200 OK in 600ms (Views: 80.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:38:05 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (59.4ms)
+  Rendered layouts/_navbar.html.slim (3.3ms)
+  Rendered layouts/_footer.html.slim (3.0ms)
+Completed 200 OK in 100ms (Views: 85.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:38:07 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (51.7ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+  Rendered layouts/_footer.html.slim (3.4ms)
+Completed 200 OK in 269ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:38:10 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (55.5ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+  Rendered layouts/_footer.html.slim (3.2ms)
+Completed 200 OK in 150ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-15 13:38:12 +0200
+Processing by NpuzzleController#index as HTML
+  Rendering npuzzle/index.html.slim within layouts/application
+  Rendered npuzzle/index.html.slim within layouts/application (54.9ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (2.9ms)
+Completed 200 OK in 202ms (Views: 87.9ms | ActiveRecord: 0.0ms)
+
+

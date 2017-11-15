@@ -2,10 +2,11 @@
 
 .panel-heading.text-center
   h1 A* Search Algorithm
-
+  p A topic tought by the WeThinkCode_ project 'Npuzzle'
 .panel-heading.text-center
-  span.h3 Explanation  
-.panel-body
+  span.h2 
+    a href="#explanation" data-toggle="collapse" Explanation  
+.panel-body.collapse#explanation
   .col-lg-4.text-center
     h4 What is it?
     p The #{link_to 'A* Search algorithm', "https://en.wikipedia.org/wiki/A*_search_algorithm" } (Pronounced 'A Star') is a pathfinding procedure based on #{link_to "Edsger Djikstra's Algorithm", "https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm"}, which can be used to find a viable path from a starting position or state, to an end position or state in a more computationally efficient way.  
@@ -17,8 +18,9 @@
     p Djikstra's algorithm works by exploring every possible choice that can be taken in a problem and creating a tree of possible decisions until it finds a solution. Every iteration then explores the best looking choice, and the new decisions are added back to a queue, until a solution is found. 
     p A* guides this process by calculating a guess of how close a decision brings the problem to being solved. This estimation allows A* to ignore many choices and thus find a solution faster.
 .panel-heading.text-center
-  h1 Applying It To A Puzzle
-.panel-body.text-center
+  span.h2 
+    a href="#applytopuzzle" data-toggle="collapse" Applying It To A Puzzle
+.panel-body.text-center.collapse#applytopuzzle
   p Below we have a representation of a sliding block puzzle, akin to the cheap picture toys occasionally found on keychains. This "NPuzzle", named for the requirement to be able to solve a 'N by N' puzzle is represented here as a series of numbers which need to be swapped in order to place the blocks in the correct order and solve the puzzle.
   span #{'[0, 1, 2]'}
   br
@@ -37,23 +39,19 @@
   span #{'[15, 14, 13, 12]'}
   br
   br
-/ .panel-heading.text-center
-/   span.h3 Input Your Own Puzzle
-/ .panel-body
-  / = form_tag npuzzle_index_path do |f|
-    = f.submit
-
+  p These puzzles are the internal representations that the algorithm uses to quickly solve the puzzle. These states are all saved and passed to the Rails Templating Engine which is instructured to replace the number with the respective image segment that is shown below.
 .panel-heading.text-center
-  span.h3 Important States  
-.panel-body
-  .container-fluid 
+  span.h3 
+    a href="#importantstates" data-toggle="collapse" Important States  
+.panel-body.collapse.in id='importantstates'
+  .container-fluid.text-center
+    p Below are the start and end state of our puzzle. A picture of the WeThinkCode_ campus, scrambled and complete. For the purposes of the puzzle, the square highlighted with a green border may be swapped with any adjacent piece to solve the puzzle.
     .col-lg-6.text-center
       b Start State:
       br
       - @results[:start].state.each_with_index do |line, index|
         - line.each do |v| 
-          = image_tag "#{line.size}x#{line.size}/#{v}.jpeg"
-        / span #{'['}#{line.map{|v| v.to_s.rjust(length, '0') }.join(', ')}#{']'}
+          = image_tag "#{line.size}x#{line.size}/#{v}.jpeg", class: "#{v == 0 ? 'empty' : ''}"
         br
       br
     .col-lg-6.text-center
@@ -61,64 +59,64 @@
       br
       - @results[:end].state.each_with_index do |line, index|
         - line.each do |v| 
-          = image_tag "#{line.size}x#{line.size}/#{v}.jpeg"
-        / span #{'['}#{line.map{|v| v.to_s.rjust(length, '0') }.join(', ')}#{']'}
+          = image_tag "#{line.size}x#{line.size}/#{v}.jpeg", class: "#{v == 0 ? 'empty' : ''}"
         br
 
-  / .
-  /   h2 Representations
-  /   - @results[:representations].each do |rep, v|
-  /     span #{rep}
-  /     br
-
 .panel-heading.text-center
-  span.h3 Solution
-.panel-body
+  span.h3 
+    a href="#solution" data-toggle="collapse" Solution
+.panel-body.collapse.in#solution
   - @results[:solution].reverse.each_with_index do |solution, index|
     - if solution.class == String
       b #{solution}
       br
     - else
-      / .col-sm-2.text-center
-      .text-center
+      .col-lg-6.text-center
         b #{index == 0 ? 'Start' : "Move #{index}"}
         br
         - solution.each_with_index do |line, i|
-          / span #{'['}#{line.map{|v| v.to_s.rjust(length, '0') }.join(', ')}#{']'}
-          / br
           - line.each do |v|
-            = image_tag "#{line.size}x#{line.size}/#{v}.jpeg"
-            / span = "line = #{line.inspect}"
-            / br
-            / span = "v = #{v}"
-            / br
-            / span = "mod = #{v % line.size}"
-            / br
-            / span = "index = #{index}"
-            / br
-            / span = "i = #{i}"
+            = image_tag "#{line.size}x#{line.size}/#{v}.jpeg", class: "#{v == 0 ? 'empty' : ''}"
           br
         br
 
-    / . 
-    /   h2 Open Set
-    /   - @results[:open_set].each do |weight, set|
-    /     - set.each do |result|
-    /       .
-    /         b #{result}
-    /         br
-    /         span #{result.state}
-    /         br
-    /         span Parent Node: #{result.parent || 'None'}
+.panel-heading.text-center
+  span.h3
+    a href="#technicalnotes" data-toggle="collapse" Technical Notes
+.panel-body.collapse#technicalnotes
+  .col-lg-6
+    ul.text-center
+      li 
+        p Not all puzzle configurations are solveable. Depending on the arrangement of pieces, it can occur that the final out of place piece cannot be reached without moving other pieces out of place.
+        p To prevent this issue for this demonstration, all puzzles are randomly generated by taking the assembled state and making up to 100 random moves from that state. 
+      li
+        p This implementation is using a Manhattan Distance Calculation for it's heuristical weighting. A Hamming and Euclidean Distance implementation have been written, but are not in use.
+  .col-lg-6
+    ul.text-center
+      li
+        p This demonstrations implementation is being run on the server side, and was written to ensure a response within reasonable HTTP request response cycle times. (IE < 3 seconds)
+        p As such, while it is capable of solving them, 4x4 and 5x5 puzzles are disabled.
+      li
+        p This implementation of the Algorithm contains code preventing the exploration of states which have been seen before. While in some problems this behaviour is desireable, for an Npuzzle it is safe to assume that if a state has been seen before, there was a faster way to get to that point.
+        p Interestingly, the result of this is that while the maximum number of possible configurations in a 3x3 puzzle in 9 Factorial (362880), this implementation will at most, ever explore approximately 183000 before determining the puzzle to be unsolveable.
 
-    / . 
-    /   h2 Closed Set
-    /   - unless @results[:closed_set].empty?
-    /     .
-    /       b #{@results[:closed_set].select{|v| v.parent.nil?}.first}
-    /       br
-    /       - @results[:closed_set].select{|v| v.parent.nil?}.first.state.each do |line|
-    /         span #{line}
-    /         br
-    /       br
-    /       = render partial: 'sets', locals: {indent: 1, items: @results[:closed_set].select{|v| v.parent == @results[:closed_set].select{|v| v.parent.nil?}.first}, set: @results[:closed_set]}
+.panel-heading.text-center
+  span.h3 Try Another Puzzle
+.panel-body.text-center
+  = button_to 'Scramble The Puzzle', root_path, method: :get, class: 'btn btn-default'
+
+      
+
+
+// javascript:
+//   var ancestor = document.getElementById('solution'),
+//     descendents = ancestor.getElementsByTagName('div');
+
+//   var i, e;
+//   for (i = 0; i < descendents.length; ++i) {
+//     e = descendents[i];
+//     ancestor.innerHTML = e.innerHTML;
+//     if (i + 1 == descendents.length) {
+//       i = -1;
+//     }
+//    }
